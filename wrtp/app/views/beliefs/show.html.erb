@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @belief.title %>
+</p>
+
+<p>
+  <strong>Summary:</strong>
+  <%= @belief.summary %>
+</p>
+
+<p>
+  <strong>Explanation:</strong>
+  <%= @belief.explanation %>
+</p>
+
+<p>
+  <strong>Score:</strong>
+  <%= @belief.score %>
+</p>
+
+<%= link_to 'Edit', edit_belief_path(@belief) %> |
+<%= link_to 'Back', beliefs_path %>
