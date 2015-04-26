@@ -5,10 +5,12 @@ class CreateBeliefs < ActiveRecord::Migration
       t.text :summary
       t.text :explanation
       t.integer :score
+      t.boolean :local,     default: 0
 
       t.timestamps null: false
     end
 
     add_index :beliefs, :score
+    add_index :beliefs, :local
   end
 end

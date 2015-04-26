@@ -3,8 +3,7 @@ class CreateIssues < ActiveRecord::Migration
     create_table :issues do |t|
       t.string :name
       t.text :summary
-      t.string :score
-      t.string :integer
+      t.integer :score
 
       t.timestamps null: false
     end

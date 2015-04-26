@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  description: MyString
-  url: MyString
-  published: false
+  name: YouTube video
+  description: Description.
+  url: http://www.youtube.com
+  published: true
 
 two:
-  name: MyString
-  description: MyString
-  url: MyString
-  published: false
+  name: CNN article
+  description: Description.
+  url: http://www.cnn.com
+  published: true

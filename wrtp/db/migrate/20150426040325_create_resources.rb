@@ -8,7 +8,7 @@ class CreateResources < ActiveRecord::Migration
 
       t.timestamps null: false
     end
-    
+
     add_index :resources, :published
   end
 end

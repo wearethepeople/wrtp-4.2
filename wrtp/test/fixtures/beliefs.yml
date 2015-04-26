@@ -1,13 +1,22 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  summary: MyText
-  explanation: MyText
+  title: Keep gun control moderate
+  summary: Summary for keeping gun control moderate.
+  explanation: My explanation that will include references to resources.
   score: 1
+  local: 0
 
 two:
-  title: MyString
-  summary: MyText
-  explanation: MyText
-  score: 1
+  title: Audit the Federal Reserve
+  summary: Summary of auditing the federal reserve.
+  explanation: My explanation that will include references to resources.
+  score: 0
+  local: 0
+
+three:
+  title: Concentrate DART money inside of the loop
+  summary: Summary of oncentrating DART money inside of the loop.
+  explanation: My explanation that will include references to resources.
+  score: 10
+  local: 1
