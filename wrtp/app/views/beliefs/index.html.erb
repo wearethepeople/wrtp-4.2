@@ -5,9 +5,8 @@
 <table>
   <thead>
     <tr>
+      <th>ID</th>
       <th>Title</th>
-      <th>Summary</th>
-      <th>Explanation</th>
       <th>Score</th>
       <th colspan="3"></th>
     </tr>
@@ -16,9 +15,8 @@
   <tbody>
     <% @beliefs.each do |belief| %>
       <tr>
+        <td><%= belief.id %></td>
         <td><%= belief.title %></td>
-        <td><%= belief.summary %></td>
-        <td><%= belief.explanation %></td>
         <td><%= belief.score %></td>
         <td><%= link_to 'Show', belief %></td>
         <td><%= link_to 'Edit', edit_belief_path(belief) %></td>
