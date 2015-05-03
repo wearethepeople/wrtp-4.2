@@ -18,7 +18,7 @@ class IssuesControllerTest < ActionController::TestCase
 
   test "should create issue" do
     assert_difference('Issue.count') do
-      post :create, issue: { integer: @issue.integer, name: @issue.name, score: @issue.score, summary: @issue.summary }
+      post :create, issue: { name: @issue.name, score: @issue.score, summary: @issue.summary }
     end
 
     assert_redirected_to issue_path(assigns(:issue))
@@ -35,7 +35,7 @@ class IssuesControllerTest < ActionController::TestCase
   end
 
   test "should update issue" do
-    patch :update, id: @issue, issue: { integer: @issue.integer, name: @issue.name, score: @issue.score, summary: @issue.summary }
+    patch :update, id: @issue, issue: { name: @issue.name, score: @issue.score, summary: @issue.summary }
     assert_redirected_to issue_path(assigns(:issue))
   end
 
