@@ -6,6 +6,14 @@ one:
   explanation: My explanation that will include references to resources.
   score: 1
   local: 0
+  issue: one
+
+one_no_issue:
+  title: Keep gun control moderate
+  summary: Summary for keeping gun control moderate.
+  explanation: My explanation that will include references to resources.
+  score: 1
+  local: 0
 
 two:
   title: Audit the Federal Reserve
@@ -13,6 +21,7 @@ two:
   explanation: My explanation that will include references to resources.
   score: 0
   local: 0
+  issue: two
 
 three:
   title: Concentrate DART money inside of the loop
@@ -20,3 +29,4 @@ three:
   explanation: My explanation that will include references to resources.
   score: 10
   local: 1
+  issue: two

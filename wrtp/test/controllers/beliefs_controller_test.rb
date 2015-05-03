@@ -3,6 +3,7 @@ require 'test_helper'
 class BeliefsControllerTest < ActionController::TestCase
   setup do
     @belief = beliefs(:one)
+    @issue = issues(:one)
   end
 
   test "should get index" do

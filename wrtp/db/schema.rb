@@ -19,10 +19,12 @@ ActiveRecord::Schema.define(version: 20150426040325) do
     t.text     "explanation"
     t.integer  "score"
     t.boolean  "local",       default: false
+    t.integer  "issue_id"
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
   end
 
+  add_index "beliefs", ["issue_id"], name: "index_beliefs_on_issue_id"
   add_index "beliefs", ["local"], name: "index_beliefs_on_local"
   add_index "beliefs", ["score"], name: "index_beliefs_on_score"
 

@@ -10,4 +10,11 @@ class BeliefTest < ActiveSupport::TestCase
 
     assert_not belief.save
   end
+
+  test 'Belongs to an Issue' do
+    issue = issues(:one)
+    belief = beliefs(:one)
+
+    assert_equal issue, belief.issue
+  end
 end
