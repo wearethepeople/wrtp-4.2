@@ -14,39 +14,39 @@
 ActiveRecord::Schema.define(version: 20150426040325) do
 
   create_table "beliefs", force: :cascade do |t|
-    t.string   "title"
-    t.text     "summary"
-    t.text     "explanation"
-    t.integer  "score"
-    t.boolean  "local",       default: false
-    t.integer  "issue_id"
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
+    t.string   "title",       limit: 255
+    t.text     "summary",     limit: 65535
+    t.text     "explanation", limit: 65535
+    t.integer  "score",       limit: 4
+    t.boolean  "local",       limit: 1,     default: false
+    t.integer  "issue_id",    limit: 4
+    t.datetime "created_at",                                null: false
+    t.datetime "updated_at",                                null: false
   end
 
-  add_index "beliefs", ["issue_id"], name: "index_beliefs_on_issue_id"
-  add_index "beliefs", ["local"], name: "index_beliefs_on_local"
-  add_index "beliefs", ["score"], name: "index_beliefs_on_score"
+  add_index "beliefs", ["issue_id"], name: "index_beliefs_on_issue_id", using: :btree
+  add_index "beliefs", ["local"], name: "index_beliefs_on_local", using: :btree
+  add_index "beliefs", ["score"], name: "index_beliefs_on_score", using: :btree
 
   create_table "issues", force: :cascade do |t|
-    t.string   "name"
-    t.text     "summary"
-    t.integer  "score"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "name",       limit: 255
+    t.text     "summary",    limit: 65535
+    t.integer  "score",      limit: 4
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
-  add_index "issues", ["score"], name: "index_issues_on_score"
+  add_index "issues", ["score"], name: "index_issues_on_score", using: :btree
 
   create_table "resources", force: :cascade do |t|
-    t.string   "name"
-    t.string   "description"
-    t.string   "url"
-    t.boolean  "published"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.string   "name",        limit: 255
+    t.string   "description", limit: 255
+    t.string   "url",         limit: 255
+    t.boolean  "published",   limit: 1
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
-  add_index "resources", ["published"], name: "index_resources_on_published"
+  add_index "resources", ["published"], name: "index_resources_on_published", using: :btree
 
 end
